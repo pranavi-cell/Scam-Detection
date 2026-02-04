@@ -5,6 +5,9 @@ from pydantic import BaseModel
 import google.generativeai as genai
 
 app = FastAPI()
+@app.get("/")
+def home():
+    return {"message": "Hello Railway"}
 
 # 1. API KEYS (Updated with your provided key)
 GEMINI_API_KEY = "AIzaSyCRymXiBx8iKSOU5jRSF5SZjPWoG9cMxjQ"
